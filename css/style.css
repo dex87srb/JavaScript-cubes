@@ -1,3 +1,9 @@
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 p {
   width: 300px;
 }

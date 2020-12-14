@@ -39,7 +39,6 @@ var secondFlock = 57;
 
 function Task3() {
   var task3 = document.getElementById("task3");
-  var finalResult;
 
   firstFlock = firstFlock - 12;
   secondFlock = secondFlock + 12 - 4;
@@ -48,4 +47,80 @@ function Task3() {
     task3.innerHTML = "First flock is larger then the second one!";
   else if (firstFlock == secondFlock)
     task3.innerHTML = "First flock is equal to the second one!";
+}
+
+/*JS DATA TYPES & CONDITIONALS*/
+
+/*task 1*/
+
+var arrayMax = [15, -2, 22, 0, 13];
+var max = arrayMax[0];
+function MaxNumber() {
+  var maxNumber = document.getElementById("maxNumber");
+  for (var i = 0; i <= arrayMax.length - 1; i++) {
+    if (arrayMax[i] > max) max = arrayMax[i];
+  }
+
+  return (maxNumber.innerHTML = max);
+}
+
+/*task 2*/
+
+var arraySign = [3, -7, 2];
+var max = arrayMax[0];
+function DetermineSign() {
+  var sign = document.getElementById("sign");
+  var result = arraySign[0] * arraySign[1] * arraySign[2];
+
+  if (result > 0) sign.innerHTML = "The result is in +";
+  else sign.innerHTML = "The result is in -";
+}
+
+/*task 3*/
+
+function LanguageDetermine() {
+  var languages = document.getElementById("languageValue").value;
+  var languageCheck = document.getElementById("languageCheck");
+  switch (languages) {
+    case "eng":
+      {
+        languageCheck.innerHTML = "Hello World!";
+      }
+      break;
+    case "spa":
+      {
+        languageCheck.innerHTML = "Ola Mondo!";
+      }
+      break;
+    case "ser":
+      {
+        languageCheck.innerHTML = "Zdravo Svete!";
+      }
+      break;
+    case "ro":
+      {
+        languageCheck.innerHTML = "Salut Oameni!";
+      }
+      break;
+    case "fra":
+      {
+        languageCheck.innerHTML = "Salut Monde!";
+      }
+      break;
+  }
+}
+
+/*task 4*/
+
+function CheckUserAge() {
+  var age = document.getElementById("age");
+  var userAge = 39;
+  var userAgeCheck;
+  userAge >= 28 ? (userAgeCheck = true) : (userAgeCheck = false);
+
+  if (userAgeCheck === false) age.innerHTML = "User is less than 28 years old";
+  else if (userAgeCheck === true) {
+    if (userAge > 28) age.innerHTML = "User is older than 28";
+    else age.innerHTML = "User is 28";
+  }
 }
