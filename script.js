@@ -124,3 +124,119 @@ function CheckUserAge() {
     else age.innerHTML = "User is 28";
   }
 }
+
+/*JS ARRAYS & LOOPS*/
+
+/*task 1*/
+
+console.log("JS ARRAYS & LOOPS");
+
+var dataOld = [34, true, "Peter", 1992];
+var dataNew = [];
+
+for (var i = 0; i < dataOld.length; i++) {
+  dataNew[dataNew.length] = dataOld[i];
+}
+
+console.log("TASK 1");
+console.log(dataNew);
+console.log("\n");
+
+/*task 2*/
+
+var dataOld1 = [34, true, "Peter", 1992];
+var dataNew1 = [];
+
+for (var i = 0; i < dataOld1.length; i++) {
+  dataNew1[dataNew1.length] = dataOld1[dataOld1.length - 1 - i];
+}
+
+console.log("TASK 2");
+console.log(dataNew1);
+console.log("\n");
+
+/*task 3*/
+
+var dataOld2 = [34, true, "Peter", 1992];
+var dataNew2 = [12, "Jack"];
+
+for (var i = 0; i < dataOld2.length; i++) {
+  dataNew2[dataNew2.length] = dataOld2[i];
+}
+
+console.log("TASK 3");
+console.log(dataNew2);
+console.log("\n");
+
+/*task 4*/
+
+var a = [12, 56, 32, 44, 69];
+var b = [88, 7, 13];
+var c = [];
+
+for (var i = 0; i < a.length; i++) {
+  c[c.length] = a[i];
+}
+for (var j = 0; j < b.length; j++) {
+  c[c.length] = b[j];
+}
+
+console.log("TASK 4");
+console.log(c);
+console.log("\n");
+
+/*task 5*/
+
+var a = [12, 56, 32, 44];
+var b = [88, 7, 13];
+var c = [];
+
+for (var i = 0; i < a.length; i++) {
+  c[c.length] = a[i];
+  if (b[i] != null) {
+    c[c.length] = b[i];
+  }
+}
+
+console.log("TASK 5");
+console.log(c);
+console.log("\n");
+
+/*task 6*/
+
+console.log("TASK 6");
+
+for (var i = 0; i < 6; i++) {
+  var str = "";
+  for (var j = 0; j <= i; j++) {
+    str += "*";
+  }
+  console.log(str);
+}
+
+console.log("\n");
+
+/*task 7*/
+
+console.log("TASK 7");
+
+var numA = 6;
+var numB = 10;
+var alt = "";
+
+/*Zasto variabla ako je deklarisana van petlje, u ovom slucaju da stavim
+str van ili unutar funkcije, onda mi drugaciji rezultat daje? Na osnovu ovog primera sam provalio da je 
+i u drugim jezicima vazi isto pravilo.
+.*/
+
+for (var i = 0; i < numA; i++) {
+  var str = "";
+  for (var j = 0; j < numB; j++) {
+    if (i == 0 || j == 0 || i == numA - 1 || j == numB - 1) {
+      str += "*";
+    } else str += " ";
+  }
+
+  alt += str + "\n";
+}
+console.log(alt);
