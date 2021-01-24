@@ -6,9 +6,9 @@ var peter = 3500;
 var jim = 5000;
 
 function moreMoney() {
-  var task1 = document.getElementById("task1");
-  if (peter > jim) task1.innerHTML = peter < jim;
-  else task1.innerHTML = jim < peter;
+  var money = document.getElementById("task1");
+  if (peter > jim) money.innerHTML = peter < jim;
+  else money.innerHTML = jim < peter;
 }
 
 /*task 2*/
@@ -18,7 +18,7 @@ var counter = 8;
 var result;
 
 function oldMike() {
-  var task2 = document.getElementById("task2");
+  var old = document.getElementById("task2");
   var i = 0;
   var finalResult;
 
@@ -27,7 +27,7 @@ function oldMike() {
     finalResult = result / 2;
   }
 
-  task2.innerHTML = finalResult;
+  old.innerHTML = finalResult;
 }
 
 /*task 3*/
@@ -36,15 +36,15 @@ var firstFlock = 78;
 var secondFlock = 57;
 
 function flockOneAndTwo() {
-  var task3 = document.getElementById("task3");
+  var flock = document.getElementById("task3");
 
   firstFlock = firstFlock - 12;
   secondFlock = secondFlock + 12 - 4;
 
   if (firstFlock > secondFlock)
-    task3.innerHTML = "First flock is larger then the second one!";
+    flock.innerHTML = "First flock is larger then the second one!";
   else if (firstFlock == secondFlock)
-    task3.innerHTML = "First flock is equal to the second one!";
+    flock.innerHTML = "First flock is equal to the second one!";
 }
 
 /*JS DATA TYPES & CONDITIONALS*/
