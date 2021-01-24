@@ -1,13 +1,11 @@
 /*JavaScript variables and operators*/
 
-var task3 = document.getElementById("task3");
-
 /*task 1*/
 
 var peter = 3500;
 var jim = 5000;
 
-function Task1() {
+function moreMoney() {
   var task1 = document.getElementById("task1");
   if (peter > jim) task1.innerHTML = peter < jim;
   else task1.innerHTML = jim < peter;
@@ -19,7 +17,7 @@ var john = 38;
 var counter = 8;
 var result;
 
-function Task2() {
+function oldMike() {
   var task2 = document.getElementById("task2");
   var i = 0;
   var finalResult;
@@ -37,7 +35,7 @@ function Task2() {
 var firstFlock = 78;
 var secondFlock = 57;
 
-function Task3() {
+function flockOneAndTwo() {
   var task3 = document.getElementById("task3");
 
   firstFlock = firstFlock - 12;
@@ -55,7 +53,7 @@ function Task3() {
 
 var arrayMax = [15, -2, 22, 0, 13];
 var max = arrayMax[0];
-function MaxNumber() {
+function maxNumber() {
   var maxNumber = document.getElementById("maxNumber");
   for (var i = 0; i <= arrayMax.length - 1; i++) {
     if (arrayMax[i] > max) max = arrayMax[i];
@@ -68,7 +66,7 @@ function MaxNumber() {
 
 var arraySign = [3, -7, 2];
 var max = arrayMax[0];
-function DetermineSign() {
+function determineSign() {
   var sign = document.getElementById("sign");
   var result = arraySign[0] * arraySign[1] * arraySign[2];
 
@@ -78,7 +76,7 @@ function DetermineSign() {
 
 /*task 3*/
 
-function LanguageDetermine() {
+function languageDetermine() {
   var languages = document.getElementById("languageValue").value;
   var languageCheck = document.getElementById("languageCheck");
   switch (languages) {
@@ -112,7 +110,7 @@ function LanguageDetermine() {
 
 /*task 4*/
 
-function CheckUserAge() {
+function checkUserAge() {
   var age = document.getElementById("age");
   var userAge = 39;
   var userAgeCheck;
@@ -264,12 +262,12 @@ console.log("\n");
 
 /*task 2*/
 
-function ReceiveAnyPar(any) {
+function receiveAnyPar(any) {
   console.log(any);
 }
 
 console.log("TASK 2");
-ReceiveAnyPar(typeof "Dex");
+receiveAnyPar(typeof "Dex");
 console.log("\n");
 
 /*task 3*/
@@ -296,7 +294,7 @@ var arrayLandH = [32, 41, 5, 6, 3, 8, 39];
 var lowest = arrayLandH[0];
 var highest = arrayLandH[0];
 
-function SecondLowestAndHighest(array, lowest, highest) {
+function secondLowestAndHighest(array, lowest, highest) {
   var newArray = [];
 
   for (var i = 0; i < array.length; i++) {
@@ -321,7 +319,7 @@ function SecondLowestAndHighest(array, lowest, highest) {
 }
 
 console.log("TASK 4");
-SecondLowestAndHighest(arrayLandH, lowest, highest);
+secondLowestAndHighest(arrayLandH, lowest, highest);
 console.log("\n");
 
 /*task 5*/
@@ -329,11 +327,11 @@ console.log("\n");
 var arrayOfNumbers = [4, 65, 75, 78];
 var providedNumber = 77;
 
-function ProvideBiggerNumberArray(array, number) {
-  CheckNumbersBigger(array, number);
+function provideBiggerNumberArray(array, number) {
+  checkNumbersBigger(array, number);
 }
 
-function CheckNumbersBigger(array, number) {
+function checkNumbersBigger(array, number) {
   var newArray = [];
   for (var i = 0; i < array.length; i++) {
     if (array[i] > number) newArray[newArray.length] = array[i];
@@ -342,7 +340,7 @@ function CheckNumbersBigger(array, number) {
 }
 
 console.log("TASK 5");
-ProvideBiggerNumberArray(arrayOfNumbers, providedNumber);
+provideBiggerNumberArray(arrayOfNumbers, providedNumber);
 console.log("\n");
 
 /*task 6*/
@@ -350,7 +348,7 @@ console.log("\n");
 var arrayMaximum = [15, -2, 22, 0, 13];
 var maximumAndLowNumber = arrayMaximum[0];
 
-function MaxNum(array, maxNumber) {
+function maxNum(array, maxNumber) {
   var maxNumber;
   for (var i = 0; i < array.length; i++) {
     if (array[i] > maxNumber) maxNumber = array[i];
@@ -359,7 +357,7 @@ function MaxNum(array, maxNumber) {
   return maxNumber;
 }
 
-function LowNum(array, lowNumber) {
+function lowNum(array, lowNumber) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] < lowNumber) lowNumber = array[i];
   }
@@ -367,29 +365,29 @@ function LowNum(array, lowNumber) {
   return lowNumber;
 }
 
-function MultiLowAndHigh(array, maxAndLow) {
-  var max = MaxNum(array, maxAndLow);
-  var low = LowNum(array, maxAndLow);
+function multiLowAndHigh(array, maxAndLow) {
+  var max = maxNum(array, maxAndLow);
+  var low = lowNum(array, maxAndLow);
 
   console.log(max * low);
 }
 
 console.log("TASK 6");
-MultiLowAndHigh(arrayMaximum, maximumAndLowNumber);
+multiLowAndHigh(arrayMaximum, maximumAndLowNumber);
 console.log("\n");
 
 /*task 7*/
 
 var arrayBig = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
 
-function UniqueWithoutBiggestN(array) {
+function uniqueWithoutBiggestN(array) {
   var unique = array.filter((item, i, ar) => ar.indexOf(item) === i);
   //morao da se sluzim ovom metodom, jer se nisam snasao manuelno...
 
-  BiggestDelete(unique);
+  biggestDelete(unique);
 }
 
-var BiggestDelete = function (array) {
+var biggestDelete = function (array) {
   var biggestNum = array[0];
   var newArray = [];
 
@@ -407,4 +405,5 @@ var BiggestDelete = function (array) {
 };
 
 console.log("TASK 7");
-UniqueWithoutBiggestN(arrayBig, BiggestDelete);
+uniqueWithoutBiggestN(arrayBig, biggestDelete);
+console.log("\n");
