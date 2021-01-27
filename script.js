@@ -349,7 +349,6 @@ var arrayMaximum = [15, -2, 22, 0, 13];
 var maximumAndLowNumber = arrayMaximum[0];
 
 function maxNum(array, maxNumber) {
-  var maxNumber;
   for (var i = 0; i < array.length; i++) {
     if (array[i] > maxNumber) maxNumber = array[i];
   }
@@ -365,26 +364,39 @@ function lowNum(array, lowNumber) {
   return lowNumber;
 }
 
-function multiLowAndHigh(array, maxAndLow) {
-  var max = maxNum(array, maxAndLow);
-  var low = lowNum(array, maxAndLow);
-
-  console.log(max * low);
+function multiLowAndHigh(low, max) {
+  console.log(
+    max(arrayMaximum, maximumAndLowNumber) *
+      low(arrayMaximum, maximumAndLowNumber)
+  );
 }
 
 console.log("TASK 6");
-multiLowAndHigh(arrayMaximum, maximumAndLowNumber);
+multiLowAndHigh(maxNum, lowNum);
 console.log("\n");
 
 /*task 7*/
 
 var arrayBig = [15, 35, 46, 23, 15, 17, 23, 24, 35, 12, 72, 64, 35, 22, 64];
+var outputArray = [];
 
-function uniqueWithoutBiggestN(array) {
-  var unique = array.filter((item, i, ar) => ar.indexOf(item) === i);
-  //morao da se sluzim ovom metodom, jer se nisam snasao manuelno...
+function uniqueWithoutBiggestN(array, biggest) {
+  for (j = 0; j < array.length; j++) {
+    var start = false;
 
-  biggestDelete(unique);
+    for (k = 0; k < outputArray.length; k++) {
+      if (array[j] == outputArray[k]) {
+        start = true;
+      }
+    }
+
+    if (start == false) {
+      outputArray[outputArray.length] = array[j];
+    }
+  }
+  //var unique = array.filter((item, i, ar) => ar.indexOf(item) === i); optional
+
+  biggest(outputArray);
 }
 
 var biggestDelete = function (array) {
