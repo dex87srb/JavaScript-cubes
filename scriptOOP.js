@@ -132,3 +132,48 @@ person.createNameAgeMarried("dex", 23, true);
 console.log("TASK 7");
 console.log(person);
 console.log("\n");
+
+/*JS ARRAYS, FUNCTIONS & OBJECTS*/
+
+console.log("JS ARRAYS, FUNCTIONS & OBJECTS");
+
+/*task 1*/
+
+var arraySub = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+console.log("TASK 1");
+
+for (var i = 0; i < arraySub.length; i++) {
+  for (var j = 0; j < arraySub[i].length; j++) {
+    console.log(
+      "At position " + i + " subposition " + j + " value is " + arraySub[i][j]
+    );
+  }
+}
+
+console.log("\n");
+
+/*task 2*/
+
+console.log("TASK 2");
+
+function logNameAndAge(anyObject) {
+  console.log(anyObject.name + " " + anyObject.age);
+}
+
+var arrayObjects = [
+  {
+    name: "Danijel",
+    age: 33,
+  },
+  { name: "Milan", age: 23 },
+  { name: "Marija", age: 35 },
+];
+
+for (var i = 0; i < arrayObjects.length; i++) {
+  logNameAndAge(arrayObjects[i]);
+}
