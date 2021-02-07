@@ -176,7 +176,7 @@ array[1] = new LogNameAndAge("Milos", 20);
 
 console.log("\n");
 
-/*JS ARRAYS, FUNCTIONS & OBJECTS* classroom practice*/
+/*JS ARRAYS, FUNCTIONS & OBJECTS classroom practice*/
 
 console.log("JS ARRAYS, FUNCTIONS & OBJECTS classroom practice");
 
@@ -234,7 +234,7 @@ var splitInTwoArray = function (array) {
   for (var i = 0; i < array.length; i++) {
     if (
       array[i].length > 0 &&
-      array.indexOf(array[i]) < array.indexOf(array[i + 1]) //u c# bi bilo "out of boundaries exception", jer zadnja iteracija na [i+1] je veca od zadnjeg indeksa, vidim ovde radi! :)
+      array.indexOf(array[i]) < array.indexOf(array[i + 1])
     ) {
       for (var j = 0; j < array[i].length; j++) {
         newA[newA.length] = array[i][j];
@@ -267,8 +267,6 @@ console.log("\n");
 /*task 4*/
 
 function checkName(data) {
-  //ovde nisam siguran jel se trazi da se obrise property ili value, nije definisano?!
-  //should remove name from the function - jel ovo typo greska ili?
   if (data.name) {
     return function () {
       delete data.name;
@@ -294,7 +292,6 @@ var someData = {
 };
 
 console.log("TASK 5");
-//should remove name from the function - jel ovo typo greska ili?
 someDataObject.checkNameAndSet = function (data) {
   if (data.name) {
     data.method = (function () {
@@ -310,3 +307,104 @@ someDataObject.checkNameAndSet = function (data) {
 };
 
 someDataObject.checkNameAndSet(someData);
+console.log("\n");
+
+/*JS FUNCTIONS ADVANCED*/
+
+console.log("JS FUNCTIONS ADVANCED");
+
+/*task 1*/
+
+function Students(name, age, averageGrade) {
+  //intelliSense mi nudi na VS code ES2015 soluciju, pa sam zato koristio klase u prethodnim taskovima
+  this.name = name;
+  this.age = age;
+  this.averageGrade = averageGrade;
+}
+
+var studentOne = new Students("Danijel", 33, 8.7);
+var studentTwo = new Students("Milos", 33, 9.0);
+
+console.log("TASK 1");
+console.log(studentOne);
+console.log(studentTwo);
+console.log("\n");
+
+/*task 2*/
+
+function Players(name, age, goalsScoredTeam, yellowCards) {
+  this.name = name;
+  this.age = age;
+  this.goalsScoredTeam = goalsScoredTeam;
+  this.yellowCards = yellowCards;
+}
+
+var playerOne = new Players("Cristiano Ronaldo", 36, 366, 68);
+var playerTwo = new Players("Lionel Andrés Messi ", 33, 467, 86);
+var playerThree = new Players("Paul Labile Pogba ", 27, 56, 3);
+
+console.log("TASK 2");
+console.log(playerOne);
+console.log(playerTwo);
+console.log(playerThree);
+console.log("\n");
+
+/*task 3*/
+
+var players = [
+  ["Cristiano Ronaldo", 36, 366, 68],
+  ["Lionel Andrés Messi ", 33, 467, 86],
+  ["Paul Labile Pogba ", 27, 56, 3],
+];
+var arrayPlayers = [];
+
+for (var i = 0; i < players.length; i++) {
+  var k = 0;
+
+  arrayPlayers[arrayPlayers.length] = new Players(
+    players[i][k++],
+    players[i][k++],
+    players[i][k++],
+    players[i][k]
+  );
+}
+
+console.log("TASK 3");
+console.log(arrayPlayers);
+console.log("\n");
+
+/*task 4*/
+
+function NumbersMethods(first, second, method) {
+  this.first = first;
+  this.second = second;
+  this.method = method;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function divide(a, b) {
+  return a / b;
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+function substract(a, b) {
+  return a - b;
+}
+
+//Jel se ovo trazilo, ako nisam skapirao, ispravicu?!
+var firstNumber = new NumbersMethods(3, 4, multiply(3, 4));
+var secondNumber = new NumbersMethods(4, 4, divide(2, 4));
+var thirdNumber = new NumbersMethods(8, 2, add(8, 2));
+var fourthNumber = new NumbersMethods(10, 3, substract(10, 3));
+
+console.log("TASK 4");
+console.log(firstNumber);
+console.log(secondNumber);
+console.log(thirdNumber);
+console.log(fourthNumber);
