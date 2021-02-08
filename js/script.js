@@ -1,4 +1,4 @@
-/*JavaScript variables and operators*/
+/*JS VARIABLES & OPERATORS*/
 
 /*task 1*/
 
