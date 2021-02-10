@@ -100,4 +100,9 @@ function activeUser(name, array) {
       break;
     } //jel se ovo trazilo, da se kopira objekat u OBJECT?
   }
+
+  setTimeout(function () {
+    localStorage.clear();
+    console.log("User is logged out!");
+  }, 60000);
 }
