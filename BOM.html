@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" type="text/CSS" href="./css/style.css" />
+    <script type="text/javascript" src="js/browserObjectModeling.js"></script>
+    <title>JavaScript predefinedFunctions</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>JS Browser Object Modeling</h1>
+      <div>
+        <h2>TASK 1</h2>
+        <p>Create a function that will ALERT if browser is online or not.</p>
+      </div>
+
+      <div>
+        <h2>TASK 2</h2>
+        <p id="reload">
+          Create a function that should, when run, reload the page.
+        </p>
+        <button onclick="reloadPage()">Reload</button>
+      </div>
+
+      <div>
+        <h2>TASK 3</h2>
+        <p>
+          Create a function that should, 3 seconds after page is loaded,
+          redirect you to google.com, ad then, 3 seconds after that take you
+          back to your page. (Comment out your code once you're done so you can
+          continue with the other tasks, as this will cause infinite loop).
+        </p>
+      </div>
+
+      <div>
+        <h2>TASK 4</h2>
+        <p>
+          Create a function that should every second console log a number
+          incremented by one. When number reach 15 it should stop running.
+        </p>
+        <button onclick="intervalNum()">Start</button>
+      </div>
+
+      <div>
+        <h2>TASK 5</h2>
+        <p id="randomNum">
+          Create a function that should return a random number (round number)
+          between 0 and 10, every time you run it.
+        </p>
+        <button onclick="executeRandom(randomNum)">Random Number</button>
+      </div>
+
+      <div>
+        <h2>TASK 6</h2>
+        <p id="randomNum">
+          STEP 1<br />
+          Create an array of objects, containing at least 5 users. Each of them
+          should have name, age and status. Status should be "inactive" for each
+          of them.<br /><br />
+
+          STEP 2<br />
+          Once page is loaded it should display a popup where user can enter his
+          name. Once it's done name user entered should be compared against
+          existing users.<br /><br />
+
+          If it doesn't match any user you should console log message:
+          <br /><br />
+
+          "User with name " + name + " doesn't exist."<br /><br />
+
+          If it match some of users, object with that user's data should be
+          copied from array. It's status should be changed to "active", and it
+          should be saved in local storage using "loggedInUser" as a key.<br /><br />
+
+          STEP 3<br />
+          After one minute user's data should be removed from local storage.<br /><br />
+
+          You should console log a message that user is logged out.
+        </p>
+        <button onclick="question(activeUser,arrayObj)">Compare</button>
+      </div>
+    </main>
+  </body>
+</html>
